@@ -1,0 +1,10 @@
+clase\ManagerAngajat.class
+beans\ControllerCreazaCont.class
+clase\Persoana.class
+clase\Angajat.class
+clase\ValidatorCNP.class
+com\mycompany\az_evimed\JAXRSConfiguration.class
+clase\ClaseUtilitare.class
+com\mycompany\az_evimed\resources\JavaEE8Resource.class
+clase\ConexiuneBazaDeDate.class
+beans\ControllerLogin.class

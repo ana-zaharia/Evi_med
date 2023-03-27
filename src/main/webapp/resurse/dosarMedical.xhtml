@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Dosar Medical</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body style="background-color: aliceblue">
+        <ui:insert>
+            <ui:include src="/WEB-INF/sabloane/sablonPaginaManager.xhtml"/>
+        </ui:insert>
+         <ui:insert>
+            <ui:include src="/WEB-INF/sabloane/sablonDosarMedical.xhtml"/>
+        </ui:insert>
+       <br/>
+      
+        <div class="card"  align="center" style="position: absolute; border-radius: 10px; background: rgba(135, 154, 255, 0.4); left:800px; top:90px; width:500px; height: 500px">
+            <h:form>
+                <h:panelGrid id="grid" cellpadding="8" columns="2" styleClass="p-mb-3">
+                    <f:facet name="header">
+                        <p:outputLabel value="Complează Adeverință Medicală"/>
+                    </f:facet>
+                    
+                     <p:outputLabel for="numar" value="Nr. adeverință:"/>
+                     <p:inputText id="numar" value="#{controllerDosarMedical.numarAd}" required="true" requiredMessage="Campul Prenume obligatoriu" />
+
+
+                    <p:outputLabel for="boli" value="Suferind(ă) de:"/>
+                    <p:inputText id="boli" value="#{controllerDosarMedical.boli}" required="true" requiredMessage="Campul Prenume obligatoriu" />
+
+                    <p:outputLabel for="recomandari" value="Recomandări:"/>
+                    <p:inputText id="recomandari" value="#{controllerDosarMedical.recomandari}"
+                       />
+                       
+                    
+                    <p:outputLabel for="servire" value="Servire la:"/>
+                    <p:inputText id="servire" required="true" value="#{controllerDosarMedical.servire}"
+                                 requiredMessage="Campul Localitate obligatoriu"/>
+                    
+                    <p:outputLabel for="data" value="Data eliberării:"/>
+                    <p:inputText id="data"  required="true" value="#{controllerDosarMedical.data}"
+                                 requiredMessage="Campul Judet obligatoriu"/>
+
+                    <p:outputLabel for="Medic" value="Medic:"/>
+                    <p:inputText id="Medic"  required="true" />
+                                 
+                 
+                   
+                    <br/><br/><br/><br/><br/><br/><br/>
+                     <p:commandButton value="Confirmă" styleClass="rounded-button" style="background-color: midnightblue; width: 130px; height: 40px;" 
+                                      action="#{controllerDosarMedical.completeazaDosar()}" ajax="false" >
+                     </p:commandButton>
+                </h:panelGrid>
+               
+               
+            </h:form>
+        </div>
+    </h:body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <ui:composition>
+            <h:form>
+        
+        <p:menubar >
+            <p:menuitem value="Contul Meu" icon="pi pi-fw pi-home" action="#{controllerLogin.clickContulMeu()}"/>
+            <p:submenu label="Angajați" icon="pi pi-fw pi-users">
+                <p:menuitem value="Crează Cont" icon="pi pi-fw pi-user-plus" action="#{controllerLogin.clickCreezaCont()}"/>     
+                <p:menuitem value="Caută Angajat" icon="pi pi-fw pi-search" action="#{controllerPagini.clickCautaAngajat()}"/>
+                <p:menuitem value="Cereri Concediu" icon="pi pi-fw pi-envelope" />   
+            </p:submenu>
+
+            <p:submenu label="Test Psihologic" icon="pi pi-fw pi-calendar">
+                    <p:menuitem value="Susține Testul" icon="pi pi-fw pi-check-square" action="#{controllerPagini.clickTest()}"/>
+                    <p:menuitem value="Vezi Statistici" icon="pi pi-fw pi-chart-bar"/>
+            </p:submenu>
+
+            <p:divider layout="vertical"/>
+
+            <p:menuitem value="Deconectare" action="#{controllerLogin.clickLogout()}" icon="pi pi-fw pi-sign-out"/>
+          
+
+            <f:facet name="options">
+                <div  align="center">
+                    <p:chip label="#{controllerLogin.numeUtilizator}" icon="pi pi-user" styleClass="p-mr-2"/>
+                </div>
+                
+            </f:facet>
+        </p:menubar>
+    </h:form>
+        </ui:composition>
+    </h:body>
+</html>

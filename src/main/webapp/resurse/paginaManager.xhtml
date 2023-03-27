@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Contul Meu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body style="background-color: aliceblue">
+     <ui:insert>
+        <ui:include src="/WEB-INF/sabloane/sablonPaginaManager.xhtml"/>
+    </ui:insert>
+       <br/>
+        <p:card style="width: 500px; position: absolute; left:525px">
+            <f:facet name="header">
+                <img alt="user header" src="../resurse/imagini/cardImage.png"/>
+            </f:facet>
+            <f:facet name="title">
+                Profilul Meu
+            </f:facet>
+           
+            <p:outputLabel id="nume" value="Nume: " style="font-weight: bold"/>
+            <p:outputLabel for="nume" value="#{controllerLogin.numeUtilizator}"/>
+            <br/><br/>
+            <p:outputLabel id="adresa" value="Adresa: " style="font-weight: bold"/>
+            <p:outputLabel for="adresa" value="#{controllerLogin.adresa}"/>
+            <br/><br/>
+            <p:outputLabel id="dept" value="Departament: " style="font-weight: bold"/>
+            <p:outputLabel for="dept" value="#{controllerLogin.numeDepartament}"/>
+            <br/><br/>
+            <p:outputLabel id="email" value="Email: " style="font-weight: bold"/>
+            <p:outputLabel for="email" value="#{controllerLogin.email}" />      
+            <!-- <f:facet name="footer">
+                <p:commandButton value="Schimbă parolă" styleClass="rounded-button" style="background-color: midnightblue; width: 150px; height: 40px; " 
+                            onclick="PF('dlg').show()" />
+            </f:facet>   --> 
+        </p:card>
+        <p:dialog header="Resetare Parola" widgetVar="dlg" height="200px" width="500px" showEffect="fade" modal="true">
+             <h:form>
+                 <h:panelGrid cellpadding="4" columns="2" styleClass="p-mb-3">
+                    <p:outputLabel for="parolaV" value="Parola noua: "/>
+                    <p:password id="parolaV"/>
+                    <p:outputLabel for="parola1" value="Parola noua: "/>
+                    <p:password id="parola1"/>
+                    <p:outputLabel for="parola2" value="Reintroduceti noua parola: "/>
+                    <p:password id="parola2"/>
+                 </h:panelGrid>
+             </h:form>
+            </p:dialog>
+    </h:body>
+</html>

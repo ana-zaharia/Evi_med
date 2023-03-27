@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+       <ui:insert>
+        <ui:include src="/WEB-INF/sabloane/sablonPaginaManager.xhtml"/>
+       </ui:insert>
+        <ui:insert>
+        <ui:include src="/WEB-INF/sabloane/sablonDosarMedical.xhtml"/>
+       </ui:insert>
+        <p:card style="width: 500px; left: 800px; position: absolute">
+            <facet>
+                ADEVERINȚĂ MEDICALĂ
+            </facet>
+            <h:form>
+                <p>Se adeverește că </p><p:outputLabel value="#{controllerDosarMedical.numeAngajat}"/><br/>
+                <p>CNP </p><p:outputLabel value="#{controllerDosarMedical.cnp}"/><p> Cu domiciliul în </p>
+                
+            </h:form>
+        </p:card>
+    </h:body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    <h:body style="background-color: aliceblue">
+        <div class="cardHeader" align="center" style="background: rgba(135, 154, 255, 0.4); height:50px">
+            <h1 style="color: midnightblue">EviMed</h1>
+        </div>
+        <div class="card" align="center" style="background: rgba(135, 154, 255, 0.4); box-shadow: 3px 3px 4px gray; border-radius: 25px; width:500px; height:400px; position: absolute; left:500px; top:100px" >
+        <h:form>
+           
+        <div class="p-grid ui-fluid" >
+            <br/>
+            <br/>
+          
+            <div class="p-col-6 p-md-4">
+                <div class="ui-inputgroup" style="width: 250px">
+                    <div class="ui-inputgroup-addon"><i class="pi pi-user"></i></div>
+                    <p:inputText id="email" placeholder="Email" required="true" requiredMessage="Campul Email obligatoriu" validatorMessage="Format email invalid" value="#{controllerLogin.email}">  
+                        <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]"/>
+                    </p:inputText>
+                </div> 
+            </div>
+            <br/>
+            <br/>
+            <div class="p-col-6 p-md-4">
+                <div class="ui-inputgroup" style="width: 250px" >
+                    <div class="ui-inputgroup-addon"><i class="pi pi-key"></i></div>
+                    <p:password id="toggle" placeholder="Parola"  required="true" requiredMessage="Campul Parola obligatoriu" value="#{controllerLogin.parola}"/>
+                </div>
+            </div>
+
+             <p:commandButton value="Loghează-te" styleClass="rounded-button" style="background-color: midnightblue; width: 130px; height: 40px; top:140px;" 
+                            action="#{controllerLogin.clickLogin}" ajax="false" />
+            </div>
+            <p:messages id="messages" closable="true"/>
+         </h:form>     
+    </div>
+          
+    </h:body>
+</html>
+

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<faces-config version="2.3"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd">
+
+    
+         
+          <managed-bean>
+              <managed-bean-name>controllerLogin</managed-bean-name>
+              <managed-bean-class>beans.ControllerLogin</managed-bean-class>
+              <managed-bean-scope>session</managed-bean-scope>
+          </managed-bean>
+           <managed-bean>
+              <managed-bean-name>controllerCreazaCont</managed-bean-name>
+              <managed-bean-class>beans.ControllerCreazaCont</managed-bean-class>
+              <managed-bean-scope>request</managed-bean-scope>
+          </managed-bean>
+            <managed-bean>
+              <managed-bean-name>controllerCautareAngajat</managed-bean-name>
+              <managed-bean-class>beans.ControllerCautareAngajat</managed-bean-class>
+              <managed-bean-scope>request</managed-bean-scope>
+          </managed-bean>
+            <managed-bean>
+              <managed-bean-name>controllerPagini</managed-bean-name>
+              <managed-bean-class>beans.ControllerPagini</managed-bean-class>
+              <managed-bean-scope>request</managed-bean-scope>
+          </managed-bean>
+           <managed-bean>
+              <managed-bean-name>controllerDosarMedical</managed-bean-name>
+              <managed-bean-class>beans.ControllerDosarMedical</managed-bean-class>
+              <managed-bean-scope>request</managed-bean-scope>
+          </managed-bean>
+</faces-config>

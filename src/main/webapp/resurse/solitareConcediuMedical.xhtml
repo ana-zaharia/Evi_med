@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body style="background-color: aliceblue">
+        <div class="card"  align="center" style="position: absolute; border-radius: 10px; background: rgba(135, 154, 255, 0.4); left:500px; top:90px; width:500px; height: 400px">
+            <h:form>
+                <h:panelGrid id="grid" cellpadding="8" columns="2" styleClass="p-mb-3">
+                    <f:facet name="header">
+                        <p:outputLabel value="Solicită Concediu Medical"/>
+                    </f:facet>
+
+                    <p:outputLabel for="inceput" value="Dată început:"/>
+                    <p:inputText id="inceput"  required="true" requiredMessage="Campul Prenume obligatoriu" />
+
+                    <p:outputLabel for="sfarsit" value="Dată sfârșit:"/>
+                    <p:inputText id="sfarsit"  required="true"
+                        requiredMessage="Campul CNP obligatoriu" >
+                        <f:validator validatorId="validatorCNP" />
+                        <f:ajax/>
+                    </p:inputText>
+                    
+                    <p:outputLabel for="perioada" value="Perioadă (exprimată în nr. de zile):"/>
+                    <p:inputText id="perioada" required="true"
+                                 requiredMessage="Campul Localitate obligatoriu"/>
+                    
+                  
+                    
+                    
+                    <br/><br/><br/><br/><br/><br/><br/>
+                     <p:commandButton value="Trimite cerere" styleClass="rounded-button" style="background-color: midnightblue; width: 130px; height: 40px;" 
+                                  ajax="false" >
+                     </p:commandButton>
+                </h:panelGrid>
+            </h:form>
+        </div>
+    </h:body>
+</html>
